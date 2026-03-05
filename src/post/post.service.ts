@@ -31,4 +31,14 @@ export class PostService {
       },
     });
   }
+
+  async findOne(id: string): Promise<PostResponseDto | null> {
+    return this.prisma.post.findUnique({
+      where: { id },
+      include: {
+        images: true,
+        comments: true,
+      },
+    });
+  }
 }
