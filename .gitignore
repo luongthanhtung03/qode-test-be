@@ -1,0 +1,9 @@
+node_modules
+dist
+prisma/migrations/
+.env
+*.log
+coverage
+.DS_Store
+
+/generated/prisma
